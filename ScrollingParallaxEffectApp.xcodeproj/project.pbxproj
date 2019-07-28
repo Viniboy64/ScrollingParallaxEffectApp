@@ -13,7 +13,7 @@
 		4C75A57722EE248100EE35AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C75A57522EE248100EE35AE /* Main.storyboard */; };
 		4C75A57922EE248500EE35AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C75A57822EE248500EE35AE /* Assets.xcassets */; };
 		4C75A57C22EE248500EE35AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C75A57A22EE248500EE35AE /* LaunchScreen.storyboard */; };
-		4CC87D3B22EE46B50079967D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC87D3A22EE46B50079967D /* TableViewCell.swift */; };
+		4CC87D4322EE4A5C0079967D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC87D4222EE4A5C0079967D /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		4C75A57822EE248500EE35AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C75A57B22EE248500EE35AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C75A57D22EE248500EE35AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4CC87D3A22EE46B50079967D /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = ../../../../../../System/Volumes/Data/Users/marcusvinicius/Documents/ScrollingParallaxEffectApp/ScrollingParallaxEffectApp/TableView/TableViewCell.swift; sourceTree = "<group>"; };
+		4CC87D4222EE4A5C0079967D /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 		4CC87D3922EE46630079967D /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				4CC87D3A22EE46B50079967D /* TableViewCell.swift */,
+				4CC87D4222EE4A5C0079967D /* TableViewCell.swift */,
 				4C75A57322EE248100EE35AE /* ViewController.swift */,
 			);
 			path = TableView;
@@ -157,8 +157,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CC87D4322EE4A5C0079967D /* TableViewCell.swift in Sources */,
 				4C75A57422EE248100EE35AE /* ViewController.swift in Sources */,
-				4CC87D3B22EE46B50079967D /* TableViewCell.swift in Sources */,
 				4C75A57022EE248000EE35AE /* AppDelegate.swift in Sources */,
 				4C75A57222EE248000EE35AE /* SceneDelegate.swift in Sources */,
 			);
