@@ -56,15 +56,23 @@
 		4C75A56E22EE248000EE35AE /* ScrollingParallaxEffectApp */ = {
 			isa = PBXGroup;
 			children = (
+				4C75A58322EE253B00EE35AE /* SupportFiles */,
 				4C75A56F22EE248000EE35AE /* AppDelegate.swift */,
 				4C75A57122EE248000EE35AE /* SceneDelegate.swift */,
 				4C75A57322EE248100EE35AE /* ViewController.swift */,
-				4C75A57522EE248100EE35AE /* Main.storyboard */,
-				4C75A57822EE248500EE35AE /* Assets.xcassets */,
-				4C75A57A22EE248500EE35AE /* LaunchScreen.storyboard */,
 				4C75A57D22EE248500EE35AE /* Info.plist */,
 			);
 			path = ScrollingParallaxEffectApp;
+			sourceTree = "<group>";
+		};
+		4C75A58322EE253B00EE35AE /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				4C75A57822EE248500EE35AE /* Assets.xcassets */,
+				4C75A57A22EE248500EE35AE /* LaunchScreen.storyboard */,
+				4C75A57522EE248100EE35AE /* Main.storyboard */,
+			);
+			path = SupportFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,7 +302,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.academy.ScrollingParallaxEffectApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,7 +320,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.academy.ScrollingParallaxEffectApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
