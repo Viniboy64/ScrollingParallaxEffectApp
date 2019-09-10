@@ -66,12 +66,36 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    var cellHeight: CGFloat = 216.0
+    var parallaxOffsetSpeed: CGFloat = 48.0
+    var parallaxImageHeight: CGFloat {
+        let maxOffset = (sqrt(pow(self.cellHeight, 2.0) + (4.0 * self.cellHeight * self.tableView.frame.height)) - self.cellHeight) / 2.0
+        
+        return maxOffset + self.cellHeight
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
+    }
+    
+    func parallaxOffset(_ newOffsetY: CGFloat, cell: UITableViewCell) -> CGFloat {
+        return ((newOffsetY - cell.frame.origin.y) / self.parallaxImageHeight) * self.parallaxOffsetSpeed
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = self.tableView.contentOffset.y
+        
+        for cell in self.tableView.visibleCells as! [TableViewCell] {
+            cell.parallaxImageTop.constant = parallaxOffset(offsetY, cell: cell)
+        }
     }
 }
 
@@ -85,6 +109,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? TableViewCell else { return UITableViewCell() }
         cell.configureCell(index["title"] ?? "Title", image: index["image"] ?? "")
+        cell.parallaxImageHeight.constant = self.parallaxImageHeight
+        cell.parallaxImageTop.constant = parallaxOffset(self.tableView.contentOffset.y, cell: cell)
         
         return cell
     }
